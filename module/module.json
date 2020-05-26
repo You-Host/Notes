@@ -1,0 +1,14 @@
+{
+  "title":"notes",
+  "desc":"Kepp notes",
+  "endpoints":{
+    "get":{
+      "/":"root"
+    },
+    "post":{
+      
+    }
+  },
+  "dependencies":[
+  ]
+}
