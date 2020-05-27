@@ -1,20 +1,37 @@
-
 <%
 var MODULE_NAME="notes";
 var MODULE_TITLE="Notes";
-var MODULE_COLOUR="000000";
-var NAV_BUTTONS = [];
+
+var MODULE_COLOUR = "FFCC00"
+var NAV_BUTTONS = [
+  {
+    "name":"New Note",
+    "onclick":"editNote(-1)"
+  }
+]
 %>
 
 <head>
 <title>YouHost Notes</title>
-<%- include("general/meta", {name:MODULE_NAME}) %>
+<%- include("general/meta", {name:MODULE_NAME, title:MODULE_TITLE}) %>
+<script src="/notes/script.js"></script>
 </head>
 
 <body>
   <%- include("general/header", {name:MODULE_NAME, title:MODULE_TITLE, colour:MODULE_COLOUR, buttons:NAV_BUTTONS}) %>
-  <section>
-    <h1>New module template</h1>
+  <section id="notes">
+    <% for(let idx=notes.length-1; idx >=0; idx--){
+      let note = notes[idx]%>
+    <%-  include("notes/note", {name:note.name, content:note.content, index:idx});%>
+    <%}%>
+  </section>
+  <section class="overlay" id="edit">
+    <div>
+      <input id="editTitle" placeholder="Unititled Note"></input><br/>
+      <textarea id="editContent" placeholder="Note Text"></textarea>
+      <button class="good" id="doneEdit">Done &#10004;</button>
+      <button class="netural" id="cancelEdit" onclick="closeEdit()">Cancel &#10006;</button>
+      <button class="bad" id="delete" onclick="deleteNote()">Delete &#128465;</button>
+    <div>
   </section>
 </body>
-

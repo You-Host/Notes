@@ -1,14 +1,14 @@
 {
-  "title":"notes",
-  "desc":"Kepp notes",
+  "title":"Notes",
+  "desc":"A simple system for keeping notes",
   "endpoints":{
     "get":{
-      "/":"root"
+      "/":"root",
+      "/get/:idx":"getNote"
     },
     "post":{
-      
+      "/set/:idx":"setNote",
+      "/delete/:idx":"deleteNote"
     }
-  },
-  "dependencies":[
-  ]
+  }
 }

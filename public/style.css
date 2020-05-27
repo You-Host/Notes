@@ -1,0 +1,87 @@
+section{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.note{
+  background-color:#FFDC0088;
+  padding:0.25em 0 0.25em 0.5em;
+  margin:1em;
+  max-width: 60%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border:0.1px solid black;
+}
+
+.note .title{
+  margin-left:0.5em;
+  padding-left:0.5em;
+  margin-top:0.2em;
+  margin-bottom:0;
+  border-bottom:1px solid black;
+}
+
+.note .title .edit{
+  float:right;
+  margin-right:0;
+  margin-top:-0.2em;
+  cursor:pointer;
+  user-select: none;
+  color:#00000066;
+  transition: 0.5s all;
+  padding-left:1em;
+  padding-right:0.5em;
+}
+
+.note .title .edit:hover{
+  color:inherit;
+}
+
+.note .content{
+  margin-top:1em;
+  margin-bottom:0.5em;
+  padding:0;
+  padding-right:1em;
+  padding-left:0.25em;
+  clear:both;
+}
+button{
+  background-color:inherit;
+  border:2px solid black;
+  padding:0.1em 0.5em;
+  box-shadow:none;
+  font-size:1.25em;
+  transition: 1s;
+  cursor:pointer;
+}
+.overlay>div{
+  background-color:lightyellow;
+}
+#doneEdit, #cancelEdit{
+  float:right;
+  margin-right:1em;
+}
+
+#editTitle{
+  font-size:2em;
+  width:60%;
+  margin-left:3%;
+  background-color: #00000011;
+  border:none;
+  padding-left:0.25em;
+}
+
+#editContent{
+  font-size:1.25em;
+  width:90%;
+  margin:5%;
+  margin-top:1em;
+  height:70%;
+  background-color: #00000011;
+  border:none;
+  resize: none;
+  margin-bottom:1em;
+}
