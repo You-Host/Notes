@@ -1,5 +1,6 @@
 var xhttp = new XMLHttpRequest();
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function editNote(id){
   document.getElementsByTagName("body")[0].style.overflow = "hidden";
   document.getElementById("edit").style.display = "block";
